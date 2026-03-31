@@ -1,0 +1,16 @@
+{
+  "short_name": "NEANChat",
+  "name": "NEANChat Messaging App",
+  "description": "A fast, modern messaging app with offline support and PWA features.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#0d0d0d",
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "/logo.png", "sizes": "144x144", "type": "image/png","purpose": "any maskable "
+}
+  ]
+}
