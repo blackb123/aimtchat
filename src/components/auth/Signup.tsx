@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { SignupComponentProps } from "@/types";
+import { API_BASE_URL } from "@/constants";
 
 export default function Signup({ isopen, setIsOpen }: SignupComponentProps) {
   const [username, setUsername] = useState("");
@@ -12,7 +13,7 @@ export default function Signup({ isopen, setIsOpen }: SignupComponentProps) {
     if (!username || !email || !password) return alert("Please fill all fields");
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:8000/auth/register", {
+      const response = await fetch(`${API_BASE_URL}/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password }),
